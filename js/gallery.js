@@ -78,24 +78,17 @@ const murkup = images.reduce((html, image) => {
     </a>
     </li>
     `);
-});
+}, 0);
 const imageList = document.querySelector('.gallery');
 
 imageList.insertAdjacentHTML('beforeend', murkup);
-
-const galleryImages = document.querySelectorAll('.gallery-image');
-galleryImages.forEach(image => {
-    image.addEventListener('click', function (event) {
-        event.preventDefault()
-    }); 
-});
     
 imageList.addEventListener('click', onImageClick);
 
 function onImageClick(event) {
+    event.preventDefault();
     const clickedElement = event.target;
     if (clickedElement.classList.contains("gallery-image")) {
-        event.preventDefault();
 
         const largeImage = clickedElement.dataset.source;
         const description = clickedElement.alt;
