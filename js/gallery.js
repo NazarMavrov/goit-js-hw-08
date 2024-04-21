@@ -64,6 +64,7 @@ const images = [
   },
 ];
 
+
 const murkup = images.reduce((html, image) => {
     return (html += `
     <li class="gallery-item">
