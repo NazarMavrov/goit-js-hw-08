@@ -78,7 +78,7 @@ const murkup = images.reduce((html, image) => {
     </a>
     </li>
     `);
-}, "");
+},"");
 const imageList = document.querySelector('.gallery');
 
 imageList.insertAdjacentHTML('beforeend', murkup);
